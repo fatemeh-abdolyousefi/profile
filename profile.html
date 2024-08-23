@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body dir="rtl">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="https://via.placeholder.com/150" alt="Profile Image" class="img-fluid rounded-circle">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#uploadModal">آپلود تصویر</button>
+        </div>
+        <div class="col-md-8">
+            <h3>نام و نام خانوادگی: فاطمه عبدالیوسفی</h3>
+            <p>شماره دانشجویی: 4008491033</p>
+            <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-4 mb-3">ریاضی: 20</div>
+                        <div class="col-6 col-md-4 mb-3">فیزیک:18.25</div>
+                        <div class="col-6 col-md-4 mb-3">دیفرانسیل:17.5</div>
+                        <div class="col-6 col-md-4 mb-3">مدار منطقی:18.5</div>
+                        <div class="col-6 col-md-4 mb-3">فارسی: 19.5</div>
+                        <div class="col-6 col-md-4 mb-3">مبانی کامپیوتر: 17</div>
+                    </div>
+
+
+                <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal"
+                    data-bs-target="#editModal">ویرایش</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="editModalLabel">ویرایش اطلاعات</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-6">
+                        <label for="studentName" class="form-label">نام و نام خانوادگی</label>
+                        <input type="text" class="form-control" id="studentName">
+                    </div>
+                    <div>
+                        <label for="studentId" class="form-label">شماره دانشجویی</label>
+                        <input type="text" class="form-control" id="studentId">
+                    </div>
+                    <div>
+                        <label for="course" class="form-label">درس</label>
+                        <input type="text" class="form-control" id="course">
+                    </div>
+                    <div>
+                        <label for="Grade" class="form-label">نمره</label>
+                        <input type="text" class="form-control" id="Grade">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">ثبت</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="uploadModalLabel">آپلود تصویر</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="profilePicture" class="form-label">انتخاب فایل</label>
+                        <input class="form-control" type="file" id="profilePicture">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">آپلود</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
